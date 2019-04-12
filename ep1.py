@@ -1,8 +1,8 @@
 # EP 2019-1: Escape Insper
 #
 # Alunos: 
-# - aluno A: Fulano da Silva, fulanos@insper.edu.br
-# - aluno B: Sicrano de Almeida, sicranoa1@insper.edu.br
+# - aluno A: Guilherme Lunetta, guilhermecl1@al.insper.edu.br
+# - aluno B: Marcelo Neves, marcelosn2@al.insper.edu.br
 
 def carregar_cenarios():
     cenarios = {
@@ -46,11 +46,11 @@ def main():
     print("------------------")
     print()
     print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
-        "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
+    "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
     print()
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
-        "na entrada do Insper, e quer procurar o professor para pedir um "
-        "adiamento do EP (boa sorte...)")
+    "na entrada do Insper, e quer procurar o professor para pedir um "
+    "adiamento do EP (boa sorte...)")
     print()
 
     cenarios, nome_cenario_atual = carregar_cenarios()
@@ -59,8 +59,9 @@ def main():
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
 
-        # Aluno A: substitua este comentário pelo código para imprimir 
-        # o cenário atual.
+        print(cenario_atual['titulo'])
+        print('-'*len(cenario_atual['titulo']))
+        print(cenario_atual['descricao'])
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
@@ -84,3 +85,4 @@ def main():
 # Programa principal.
 if __name__ == "__main__":
     main()
+
