@@ -147,13 +147,59 @@ def carregar_cenarios():
             'descricao': 'Você chegou ao quarto andar e avistou o Durão, professor de NatDes',
             'opcoes': {
                 'elevador': 'Pegar o elevador',
-                'durao': 'Falar com Durão',
-                'laboratorio': 'Entrar no laboratório de InstruMed'
+                'durao': 'Falar com Durão'
+            }
+        },
+        'durao': {
+            'titulo': 'Durão: Professor de NatDes',
+            'descricao': 'Você foi falar com Durão perguntando sobre Toshi, ele estava traumatizado, parecia um robô, ficava repetindo: LABO-TRÓTIPO, LABO-TRÓTIPO',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
+                'laboratorio': 'Entrar no laborátorio de InstruMed'
+            }
+        },
+        'laboratorio': {
+            'titulo': 'Laboratório de InstruMed',
+            'descricao': 'Você entra no laboratório e se espanta, você encontrou o Toshi, e pede o adiamento do EP! Ele diz: Bem que eu poderia adiar, mas perdi um documento muito importante hoje e por isso estou vravo e não adiarei! A não ser que você esteja com o meu documento, você está?',
+            'opcoes': {
+                    'sim': 'Você está com o documento',
+                    'nao': 'Você não está com o documeto'
+            }
+        },
+        'sim': {
+            'titulo': 'SIMMMMM',
+            'descricao': 'Você conseguiu adiar o EP!! Parabéns!!',
+            'opcoes': {}
+        },
+        'nao': {
+            'titulo': 'NAOOOOO :(',
+            'descricao': 'Você não está com o documento e por isso Toshi não adiou o EP, sinto muito!',
+            'opcoes': {}
+        },
+        'andar5': {
+            'titulo': '5º Andar',
+            'descricao': 'Você chegou ao quintar andar, avistou a sala do Toshi e um professor desconhecido!',
+            'opcoes': {
+                'salatoshi': 'Entrar na sala do Toshi',
+                'professor': 'Falar com o professor desconhecido'
+            }
+        },
+        'salatoshi': {
+            'titulo': 'Sala do Toshi',
+            'descricao': 'Você entrou na sala do Toshi, mas não encontrou ninguém! Quando estava saindo reparou na mesa dele umas anotações, era sua agenda! Lá estava a seguinte anotação do dia: - Terminar o circuito para meu robo! Agora está com você, onde ele pode terminar esse circuito?',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
+                'professor': 'Falar com o professor'
+            }
+        },
+        'procurar': {
+            'titulo': 'Procurando...',
+            'descricao': 'Você procurou por algo que possa te ajudar na biblioteca, mas não achou nada!',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
             }
         },
         
-        
-            
     }
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
@@ -197,9 +243,10 @@ def main():
                 nome_cenario_atual = escolha
             else:
                 print("Sua indecisão foi sua ruína!")
+                print('Você morreu...')
                 game_over = True
 
-    print("Você morreu!")
+    
 
 
 # Programa principal.
