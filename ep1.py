@@ -51,7 +51,109 @@ def carregar_cenarios():
                 'elevador': 'Tomar o elevador para outros andares',
                 'vasculhar': 'O lugar está escuro, vasculhar a área não deve te fazer mal'
             }
-        }
+        },
+        'vasculhar': {
+            'titulo': 'Vasculhar',
+            'descricao': 'Você foi vasculhar e morreu!',
+            'opcoes': {}
+        },
+        'andar1': {
+            'titulo': '1º Andar',
+            'descricao': 'Você está no primeiro andar',
+            'opcoes': {
+                'sala1': 'Entrar na sala do primeiro andar',
+                'dani': 'Falar com a Dani, professora de GDE',
+                'elevador': 'Pegar o elevador'
+            }
+        },
+        'sala1': {
+            'titulo': 'Sala 1',
+            'descricao': 'Você entrou na sala 1 do primeiro andar, a sala está vazia, apenas o projetor ligado',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
+                'dani': 'Falar com a Dani, professora de GDE'
+            }
+        },
+        'dani': {
+            'titulo': 'Dani: Professora de GDE',
+            'descricao': 'Olá querido aluno! Ouvi rumores que o Toshi está no 3º andar',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
+                'sala1': 'Entrar na sala 1'
+            }
+        },
+        'andar2': {
+            'titulo': '2º Andar',
+            'descricao': 'Você está no segundo andar, o lugar está movimentado e você avistou a Paulina!',
+            'opcoes': {
+                'sala2': 'Entrar na sala 2',
+                'paulina': 'Falar com a professora de ModSim, Paulina!',
+                'elevador': 'Pegar o elevador'
+            }
+        },
+        'sala2': {
+            'titulo': 'Sala 2',
+            'descricao': 'Você entrou na sala 2 e avistou um objeto no chão do fundo da sala, pegou e descobriu que era um documento do Toshi e resolveu guardar',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
+                'paulina': 'Ir falar com a paulina'
+            }
+        },
+        'paulina': {
+            'titulo': 'Paulina: Professora de ModSim',
+            'descricao': 'Você foi falar com a Paulina, ela te lembrou do Exercício 3, a entrega está chegando! Você rebateu e disse: Eu já acabei! E perguntou por Toshi, ela disse que viu ele entrando no banheiro agora há pouco!',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
+                'banheiro': 'Procurar por Toshi no banheiro',
+                'sala2': 'Entrar na sala 2'
+            }
+        },
+        'banheiro': {
+            'titulo': 'Banheiro',
+            'descricao': 'Você entrou no banheiro a procura de Toshi, ele não aparenta estar aqui!',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
+                'sala2': 'Entrar na sala 2'
+            }
+        },
+        'andar3': {
+            'titulo': '3º Andar',
+            'descricao': 'Você chega no terceiro andar e avista o Fábio, professor de InstruMed!',
+            'opcoes': {
+                'sala3': 'Entrar na sala 3',
+                'fabio': 'Falar com Fábio',
+                'elevador': 'Pegar o elevador'
+            }
+        },
+        'sala3': {
+            'titulo': 'Sala 3',
+            'descricao': 'Você entra na sala 3 e vê que está tudo apagado!',
+            'opcoes': {
+                'vasculhar': 'Vasculhar a sala',
+                'fabio': 'Falar com fabio',
+                'elevador': 'Pegar o elevador'
+            }
+        },
+        'fabio': {
+            'titulo': 'Fábio: Professor de InstruMed',
+            'descricao': 'Você foi falar com Fábio sobre Toshi, afirmando que viram ele aqui, ele disse que não o viu por aqui, mas disse que a sala dele fica no 5 andar!',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
+                'sala3': 'Ir para a sala 3'
+            }
+        },
+        'andar4': {
+            'titulo': '4º Andar',
+            'descricao': 'Você chegou ao quarto andar e avistou o Durão, professor de NatDes',
+            'opcoes': {
+                'elevador': 'Pegar o elevador',
+                'durao': 'Falar com Durão',
+                'laboratorio': 'Entrar no laboratório de InstruMed'
+            }
+        },
+        
+        
+            
     }
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
@@ -84,7 +186,7 @@ def main():
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
-            print("Acabaram-se suas opções! Mwo mwo mwooooo...")
+            print("\nAcabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
         else:
             escolha=input('O que quer fazer agora? ')
